@@ -3,7 +3,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     namespace = "husky2"
-    params_file = "/home/administrator/nahl_ws/real_husky/config/nav2_params.yaml"
+    params_file = "/home/administrator/nahl_ws/real_jackal/config/nav2_params.yaml"
     #map = "/home/administrator/nahl_ws/maps/robohub.yaml"
     map = "/home/administrator/airlab.yaml"
     return LaunchDescription([
