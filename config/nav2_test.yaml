@@ -30,7 +30,7 @@
       recovery_alpha_fast: 0.0
       recovery_alpha_slow: 0.0
       resample_interval: 1
-      robot_model_type: "differential_drive"
+      robot_model_type: "nav2_amcl::DifferentialMotionModel"
       sigma_hit: 0.2
       tf_broadcast: True
       transform_tolerance: 1.0
