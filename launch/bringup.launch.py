@@ -5,7 +5,7 @@ def generate_launch_description():
     namespace = "jackal1"
     params_file = "/home/administrator/nahl_ws/real_jackal/config/nav2_params_test.yaml"
     #map = "/home/administrator/nahl_ws/maps/robohub.yaml"
-    map = "/home/administrator/airlab.yaml"
+    map = "/home/administrator/nahl_ws/real_jackal/maps/airlab.yaml"
     return LaunchDescription([
         # Map Server
         Node(
