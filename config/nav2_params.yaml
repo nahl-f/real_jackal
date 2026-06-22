@@ -142,7 +142,7 @@
         FollowPath:
           plugin: "dwb_core::DWBLocalPlanner"
           debug_trajectory_details: True
-          min_vel_x: -0.1 #-0.25
+          min_vel_x: 0.0 #-0.25
           min_vel_y: 0.0
           max_vel_x: 1.0
           max_vel_y: 0.0
@@ -150,12 +150,12 @@
           min_speed_xy: 0.0
           max_speed_xy: 1.0
           min_speed_theta: 0.1 #0.0
-          acc_lim_x: 2.5 #10.0
+          acc_lim_x: 1.0 #2.5
           acc_lim_y: 0.0
-          acc_lim_theta: 2.0 #10.0
-          decel_lim_x: -2.5 #-10.0
+          acc_lim_theta: 1.0 #2.5
+          decel_lim_x: -1.0 #-2.5
           decel_lim_y: 0.0
-          decel_lim_theta: -2.0 #-10.0
+          decel_lim_theta: -1.0 #-2.0
           vx_samples: 20
           vy_samples: 1 #5
           vtheta_samples: 20
@@ -195,8 +195,8 @@
           plugins: ["voxel_layer", "inflation_layer"]
           inflation_layer:
             plugin: "nav2_costmap_2d::InflationLayer"
-            cost_scaling_factor: 3.0
-            inflation_radius: 0.55
+            cost_scaling_factor: 1.5
+            inflation_radius: 1.0
           voxel_layer:
             plugin: "nav2_costmap_2d::VoxelLayer"
             enabled: True
