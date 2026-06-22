@@ -3,7 +3,8 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     namespace = "jackal1"
-    params_file = "/workspaces/ros_ws/src/project/config/nav2_params.yaml"
+    params_file = "/home/administrator/nahl_ws/real_jackal/config/nav2_params.yaml"
+    map = "/home/administrator/nahl_ws/real_jackal/maps/airlab.yaml"
 
     return LaunchDescription([
         # Map Server
@@ -13,7 +14,7 @@ def generate_launch_description():
             name="map_server",
             namespace=namespace,
             output="screen",
-            parameters=[{"yaml_filename": "/opt/ros/humble/share/clearpath_nav2_demos/maps/warehouse.yaml"}],
+            parameters=[{"yaml_filename": map}],
             remappings=[
                 ("/tf", "/jackal1/tf"),      
                 ("/tf_static", "/jackal1/tf_static"),
