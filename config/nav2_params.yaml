@@ -208,7 +208,7 @@
             mark_threshold: 0
             observation_sources: scan
             scan:
-              topic: /javkal1/sensors/lidar3d_0/scan
+              topic: /jackal1/sensors/lidar3d_0/scan
               max_obstacle_height: 2.0
               clearing: True
               marking: True
