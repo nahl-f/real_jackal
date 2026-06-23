@@ -4,7 +4,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     namespace = "jackal1"
     params_file = "/home/administrator/nahl_ws/real_jackal/config/nav2_params.yaml"
-    map = "/home/administrator/nahl_ws/real_jackal/maps/airlab.yaml"
+    map = "/workspaces/ros_ws/physical_ws/maps/airlab.yaml"
 
     return LaunchDescription([
         # Map Server
