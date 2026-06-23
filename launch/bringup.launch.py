@@ -46,8 +46,8 @@ def generate_launch_description():
             output="screen",
             parameters=[params_file, {
                 "use_sim_time": False,
-                "global_costmap.global_costmap.robot_base_frame": "base_link", # Or 'husky2/base_link'
-                "global_costmap.global_costmap.obstacle_layer.scan.topic": "/husky2/sensors/lidar3d_0/scan",
+                # "global_costmap.global_costmap.robot_base_frame": "base_link", # Or 'husky2/base_link'
+                # "global_costmap.global_costmap.obstacle_layer.scan.topic": "/husky2/sensors/lidar3d_0/scan",
             }],
             remappings=[("/tf", "/jackal1/tf"), ("/tf_static", "/jackal1/tf_static")],
         ),
@@ -61,8 +61,8 @@ def generate_launch_description():
             output="screen",
             parameters=[params_file, {
                 "use_sim_time": False,
-                "local_costmap.local_costmap.robot_base_frame": "base_link",
-                "local_costmap.local_costmap.voxel_layer.scan.topic": "/husky2/sensors/lidar3d_0/scan",
+                # "local_costmap.local_costmap.robot_base_frame": "base_link",
+                # "local_costmap.local_costmap.voxel_layer.scan.topic": "/husky2/sensors/lidar3d_0/scan",
             }],
             remappings=[("/tf", "/jackal1/tf"), 
                         ("/tf_static", "/jackal1/tf_static"),
