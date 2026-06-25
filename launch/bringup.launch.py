@@ -31,7 +31,7 @@ def generate_launch_description():
             parameters=[params_file,{"use_sim_time": False}],
             remappings=[
                 ("scan", "sensors/lidar3d_0/scan"), 
-                ("odom", "platform/odom"), 
+                ("odom", "platform/odom/filtered"), 
                 ("/tf", "/jackal1/tf"),      
                 ("/tf_static", "/jackal1/tf_static"),
             ],
@@ -66,7 +66,7 @@ def generate_launch_description():
             }],
             remappings=[("/tf", "/jackal1/tf"), 
                         ("/tf_static", "/jackal1/tf_static"),
-                        ("odom", "platform/odom")],
+                        ("odom", "platform/odom/filtered")],
         ),
 
         # Behavior Tree Navigator
@@ -79,7 +79,7 @@ def generate_launch_description():
             parameters=[params_file, {"use_sim_time": False}],
             remappings=[("/tf", "/jackal1/tf"), 
                         ("/tf_static", "/jackal1/tf_static"),
-                        ("odom", "platform/odom"),
+                        ("odom", "platform/odom/filtered"),
                         ("scan", "sensors/lidar3d_0/scan")],
         ),
 
@@ -93,7 +93,7 @@ def generate_launch_description():
             parameters=[params_file, {"use_sim_time": False}],
             remappings=[("/tf", "/jackal1/tf"), 
                         ("/tf_static", "/jackal1/tf_static"),
-                        ("odom", "platform/odom"),
+                        ("odom", "platform/odom/filtered"),
                         ("scan", "sensors/lidar3d_0/scan")],
         ),
 

@@ -3,7 +3,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     namespace = "jackal1"
-    params_file = "/home/administrator/nahl_ws/real_jackal/config/nav2_params.yaml"
+    params_file = "/workspaces/ros_ws/physical_ws/jackal_nav/config/new_nav2_params.yaml"
     map = "/workspaces/ros_ws/physical_ws/maps/airlab.yaml"
 
     return LaunchDescription([
@@ -31,7 +31,7 @@ def generate_launch_description():
             parameters=[params_file,{"use_sim_time": False}],
             remappings=[
                 ("scan", "sensors/lidar3d_0/scan"), 
-                ("odom", "platform/odom"), 
+                ("odom", "platform/odom/filtered"), 
                 ("/tf", "/jackal1/tf"),      
                 ("/tf_static", "/jackal1/tf_static"),
             ],
@@ -68,7 +68,7 @@ def generate_launch_description():
             }],
             remappings=[("/tf", "/jackal1/tf"), 
                         ("/tf_static", "/jackal1/tf_static"),
-                        ("odom", "platform/odom"),
+                        ("odom", "platform/odom/filtered"),
                         ("scan", "/jackal1/sensors/lidar3d_0/scan")],
         ),
 
@@ -82,7 +82,7 @@ def generate_launch_description():
             parameters=[params_file, {"use_sim_time": False}],
             remappings=[("/tf", "/jackal1/tf"), 
                         ("/tf_static", "/jackal1/tf_static"),
-                        ("odom", "platform/odom"),
+                        ("odom", "platform/odom/filtered"),
                         ("scan", "/jackal1/sensors/lidar3d_0/scan")],
         ),
 
@@ -96,7 +96,7 @@ def generate_launch_description():
             parameters=[params_file, {"use_sim_time": False}],
             remappings=[("/tf", "/jackal1/tf"), 
                         ("/tf_static", "/jackal1/tf_static"),
-                        ("odom", "platform/odom"),
+                        ("odom", "platform/odom/filtered"),
                         ("scan", "sensors/lidar3d_0/scan")],
         ),
 
